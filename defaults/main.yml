@@ -1,2 +1,7 @@
 ---
 # defaults file for .
+
+centosApachePath: /var/www/html
+zabbixAddress: 192.168.33.10
+zabbixUser: admin
+zabbixPassword: zabbix
