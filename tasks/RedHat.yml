@@ -4,6 +4,7 @@
 - name: Checkout Zabbix Web
   git: repo=https://github.com/velinath/zabbixweb.git
        dest={{ centosApachePath }}/zabbixweb
+       force=yes
 
 - name: Apply Zabbix Connection
   replace: dest={{ centosApachePath }}/zabbixweb/index.html regexp="\'http://zabbix.org/zabbix/api_jsonrpc.php\', \'guest\', \'\'" replace="'http://{{ zabbixAddress }}/zabbix/api_jsonrpc.php', '{{ zabbixUser }}, '{{ zabbixPassword }}'' "
