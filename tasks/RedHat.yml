@@ -7,4 +7,4 @@
        force=yes
 
 - name: Apply Zabbix Connection
-  replace: dest={{ centosApachePath }}/zabbixweb/index.html regexp="\'http://zabbix.org/zabbix/api_jsonrpc.php\', \'guest\', \'\'" replace="'http://{{ zabbixAddress }}/zabbix/api_jsonrpc.php', '{{ zabbixUser }}, '{{ zabbixPassword }}'' "
+  replace: dest={{ centosApachePath }}/zabbixweb/index.html regexp="\'http://zabbix.org/zabbix/api_jsonrpc.php\', \'guest\', \'\'" replace="'http://{{ zabbixAddress }}/zabbix/api_jsonrpc.php', '{{ zabbixUser }}', '{{ zabbixPassword }}' "
